@@ -10,12 +10,12 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class MainApp {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {      //1  Start from here
 
         ApplicationContext context =
-                new AnnotationConfigApplicationContext(AppConfig.class);
+                new AnnotationConfigApplicationContext(AppConfig.class);        //2  This starts the Spring Container. it open appconfig class
 
-        StudentService service = context.getBean(StudentService.class);
+        StudentService service = context.getBean(StudentService.class);    //6  it internally called student display method
         service.printStudent();
     }
 }
